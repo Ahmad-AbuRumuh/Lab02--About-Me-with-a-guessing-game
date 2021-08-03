@@ -1,4 +1,6 @@
 'use strict'
+
+let counter = 0;
 let name = prompt("Can you tell me your name plaese?");
 alert("Welcome to my website " + name + ", after you read the paragraph, you will answer some questions, and don't worry about the case sensetive.\nare you ready? let's goo.");
 
@@ -13,6 +15,7 @@ switch(sport){
     case 'y':
     alert("Bravo, you are right.");
     console.log("Bravo, you are right.");
+    counter++;
     break;
 
     case 'no':
@@ -32,6 +35,7 @@ switch(prog){
     case 'y':
     alert("Bravo, you are right.");
     console.log("Bravo, you are right.");
+    counter++;
     break;
 
     case 'no':
@@ -58,6 +62,7 @@ switch(birth){
     case 'n':
     alert("Bravo, you are right.");
     console.log("Bravo, you are right.");
+    counter++;
     break;
 }
 
@@ -72,6 +77,7 @@ switch(age){
     case 'y':
     alert("Bravo, you are right.");
     console.log("Bravo, you are right.");
+    counter++;
     break;
 
     case 'no':
@@ -98,8 +104,58 @@ switch(smoke){
     case 'n':
     alert("Bravo, you are right.");
     console.log("Bravo, you are right.");
+    counter++;
     break;
 }
 
-alert("I hope you excited with the game " + name + ", good bye.");
+let num = Number (prompt("OK, let's now play the guessing number game.\nYou have four chances to guess the number, input the first one."));
 
+for(let i = 1; i <= 3; i++){
+
+    if(num == 7){
+        alert("yes, it's right")
+        console.log("yes, it's right")
+        counter++;
+        break;
+    }else if(num > 7){
+        alert("too high")
+        console.log("too high")
+    }else{
+        alert("too low")
+        console.log("too low")
+    }
+
+    num = prompt("Chance " + (i + 1))
+}
+alert("the correct answer is 7")
+console.log("the correct answer is 7")
+
+let arr = ['red', 'blue', 'black']
+
+let color = prompt("Now you will have 6 attempts to guess one of three correct answers.\nYou should write a color name to guess.\nChance 1.");
+let flag = false
+for(let i = 1; i <= 5; i++){
+    for(let j = 0; j <arr.length; j++){
+        if(color == arr[j]){
+            alert("yes, it's right")   
+            console.log("yes, it's right")   
+            counter++;
+            flag = true
+        }
+    }
+    if(flag){
+        break;
+    }
+    color = prompt("Chance " + (i + 1))
+}
+
+alert("These are the possible answers:  ");
+console.log("These are the possible answers:  ");
+for(let i = 0; i < arr.length; i++){
+    alert(arr[i]);
+    console.log(arr[i]);
+}
+
+
+alert("Your score is " + counter + "/7\nI hope you excited with the game " + name + ", good bye.");
+console.log("Your score is " + counter + "/7\nI hope you excited with the game " + name + ", good bye.");

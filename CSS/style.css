@@ -1,18 +1,25 @@
-header h1{
+header h1 {
     font-size: 50px;
     padding-top: 20px;
     text-align: center;
     background-color: aquamarine;
 }
 
-main p{
+main p {
     padding: 20px 500px 0 20px;
 }
 
-span{
+span p {
     padding: 5px 0 0 5px;
     background-color: burlywood;
     margin: 20px 500px 0 20px;
     padding-bottom: 10px;
     display: inline-block;
+}
+
+main h1 {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightslategray;
 }
