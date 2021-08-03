@@ -149,12 +149,8 @@ for(let i = 1; i <= 5; i++){
     color = prompt("Chance " + (i + 1))
 }
 
-alert("These are the possible answers:  ");
-console.log("These are the possible answers:  ");
-for(let i = 0; i < arr.length; i++){
-    alert(arr[i]);
-    console.log(arr[i]);
-}
+alert("These are the possible answers:  \n" + arr);
+console.log("These are the possible answers:  \n" + arr);
 
 
 alert("Your score is " + counter + "/7\nI hope you excited with the game " + name + ", good bye.");
