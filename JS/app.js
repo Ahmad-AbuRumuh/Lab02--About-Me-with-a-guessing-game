@@ -4,29 +4,32 @@ let counter = 0;
 
 let name = prompt("Can you tell me your name plaese?");
 alert("Welcome to my website " + name + ", after you read the paragraph, you will answer some questions, and don't worry about the case sensetive.\nare you ready? let's goo.");
-function  correct(x){
-if(x !== null){
-    x = x.toLowerCase();
-}
 
-switch(x){
-    case 'yes':
-    case 'y':
-    alert("Bravo, you are right.");
-    console.log("Bravo, you are right.");
-    counter++;
-        break;
-        case 'no':
-        case 'n':
-        alert("sorry, its false.");
-        console.log("sorry, its false.");
-        break;
-}
+function  correct(x){
+    if(x !== null){
+        x = x.toLowerCase();
+    }
+
+    switch(x){
+        case 'yes':
+        case 'y':
+        alert("Bravo, you are right.");
+        console.log("Bravo, you are right.");
+        counter++;
+            break;
+            case 'no':
+            case 'n':
+            alert("sorry, its false.");
+            console.log("sorry, its false.");
+            break;
+    }
 }
 function incorect(y){
     if(y !== null){
     y = y.toLowerCase();
-    }switch(y){
+    }
+
+    switch(y){
         case 'no':
         case 'n':
         alert("Bravo, you are right.");
@@ -34,17 +37,18 @@ function incorect(y){
         break;
         case 'yes':
         case 'y':
-    alert("sorry, its false.");
-    console.log("sorry, its false.");
-    counter++;
+        alert("sorry, its false.");
+        console.log("sorry, its false.");
+        counter++;
         break;
+    }
+}
 
-}}
 let sport = prompt("Do you think I like to play football?\nyes/no or y/n");
 correct(sport);
 
 let prog = prompt("Do you think I like the programming?\nyes/no");
- correct(prog);
+correct(prog);
 
 let birth = prompt("Do you think I was born in may?\nyes/no or y/n");
 incorect(birth);
@@ -77,12 +81,13 @@ for(let i = 1; i <= 3; i++){
     num = prompt("Chance " + (i + 1))
 }
 
-alert("the correct answer is 7")
-console.log("the correct answer is 7")}
 guessnum(num);
 
+alert("the correct answer is 7")
+console.log("the correct answer is 7")}
+
 // guess number q7
-let color = prompt("Now you will have 6 attempts to guess one of three correct answers.\nYou should write a color name to guess.\nChance 1.");
+
 function guesscolors(){
 let arr = ['red', 'blue', 'black']
 let flag = false
@@ -99,11 +104,12 @@ for(let i = 1; i <= 5; i++){
         break;
     }
     color = prompt("Chance " + (i + 1))
+    alert("These are the possible answers:  \n" + arr);
+    console.log("These are the possible answers:  \n" + arr);}
 }
 
-alert("These are the possible answers:  \n" + arr);
-console.log("These are the possible answers:  \n" + arr);}
-
+let color = prompt("Now you will have 6 attempts to guess one of three correct answers.\nYou should write a color name to guess.\nChance 1.");
 guesscolors(color);
+
 alert("Your score is " + counter + "/7\nI hope you excited with the game " + name + ", good bye.");
 console.log("Your score is " + counter + "/7\nI hope you excited with the game " + name + ", good bye.");
