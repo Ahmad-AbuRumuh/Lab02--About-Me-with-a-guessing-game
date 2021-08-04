@@ -1,115 +1,64 @@
 'use strict'
 
 let counter = 0;
+
 let name = prompt("Can you tell me your name plaese?");
 alert("Welcome to my website " + name + ", after you read the paragraph, you will answer some questions, and don't worry about the case sensetive.\nare you ready? let's goo.");
-
-let sport = prompt("Do you think I like to play football?\nyes/no or y/n");
-
-if(sport !== null){
-    sport = sport.toLowerCase();
+function  correct(x){
+if(x !== null){
+    x = x.toLowerCase();
 }
 
-switch(sport){
+switch(x){
     case 'yes':
     case 'y':
     alert("Bravo, you are right.");
     console.log("Bravo, you are right.");
     counter++;
-    break;
-
-    case 'no':
-    case 'n':
-    alert("Sorry, it's false.");
-    console.log("Sorry, it's false.");
-    break;
+        break;
+        case 'no':
+        case 'n':
+        alert("sorry, its false.");
+        console.log("sorry, its false.");
+        break;
 }
+}
+function incorect(y){
+    if(y !== null){
+    y = y.toLowerCase();
+    }switch(y){
+        case 'no':
+        case 'n':
+        alert("Bravo, you are right.");
+        console.log("Bravo, you are right.");
+        break;
+        case 'yes':
+        case 'y':
+    alert("sorry, its false.");
+    console.log("sorry, its false.");
+    counter++;
+        break;
+
+}}
+let sport = prompt("Do you think I like to play football?\nyes/no or y/n");
+correct(sport);
 
 let prog = prompt("Do you think I like the programming?\nyes/no");
-
-if(prog !== null){
-    prog = prog.toLowerCase();
-}
-switch(prog){
-    case 'yes':
-    case 'y':
-    alert("Bravo, you are right.");
-    console.log("Bravo, you are right.");
-    counter++;
-    break;
-
-    case 'no':
-    case 'n':
-    alert("Sorry, I told you that I love problem solving.");
-    console.log("Sorry, I told you that I love problem solving.");
-    break;
-}
+ correct(prog);
 
 let birth = prompt("Do you think I was born in may?\nyes/no or y/n");
-
-if(birth !== null){
-    birth = birth.toLowerCase();
-}
-
-switch(birth){
-    case 'yes':
-    case 'y':
-    alert("Sorry, it's october.");
-    console.log("Sorry, it's october.");
-    break;
-
-    case 'no':
-    case 'n':
-    alert("Bravo, you are right.");
-    console.log("Bravo, you are right.");
-    counter++;
-    break;
-}
+incorect(birth);
 
 let age = prompt("Do you think I was born 2001?\nyes/no or y/n");
-
-if(age !== null){
-    age = age.toLowerCase();
-}
-
-switch(age){
-    case 'yes':
-    case 'y':
-    alert("Bravo, you are right.");
-    console.log("Bravo, you are right.");
-    counter++;
-    break;
-
-    case 'no':
-    case 'n':
-    alert("Sorry, it's false");
-    console.log("Sorry, it's false");
-    break;
-}
+correct(age);
 
 let smoke = prompt("Do you think that I'm smoking?\nyes/no or y/n");
+incorect(smoke);
 
-if(smoke !== null){
-    smoke = smoke.toLowerCase();
-}
-
-switch(smoke){
-    case 'yes':
-    case 'y':
-    alert("Sorry, it's false");
-    console.log("Sorry, it's false");
-    break;
-
-    case 'no':
-    case 'n':
-    alert("Bravo, you are right.");
-    console.log("Bravo, you are right.");
-    counter++;
-    break;
-}
+// guess number q6
 
 let num = Number (prompt("OK, let's now play the guessing number game.\nYou have four chances to guess the number, input the first one."));
-
+function guessnum(){
 for(let i = 1; i <= 3; i++){
 
     if(num == 7){
@@ -127,12 +76,15 @@ for(let i = 1; i <= 3; i++){
 
     num = prompt("Chance " + (i + 1))
 }
+
 alert("the correct answer is 7")
-console.log("the correct answer is 7")
+console.log("the correct answer is 7")}
+guessnum(num);
 
-let arr = ['red', 'blue', 'black']
-
+// guess number q7
 let color = prompt("Now you will have 6 attempts to guess one of three correct answers.\nYou should write a color name to guess.\nChance 1.");
+function guesscolors(){
+let arr = ['red', 'blue', 'black']
 let flag = false
 for(let i = 1; i <= 5; i++){
     for(let j = 0; j <arr.length; j++){
@@ -150,8 +102,8 @@ for(let i = 1; i <= 5; i++){
 }
 
 alert("These are the possible answers:  \n" + arr);
-console.log("These are the possible answers:  \n" + arr);
+console.log("These are the possible answers:  \n" + arr);}
 
-
+guesscolors(color);
 alert("Your score is " + counter + "/7\nI hope you excited with the game " + name + ", good bye.");
 console.log("Your score is " + counter + "/7\nI hope you excited with the game " + name + ", good bye.");
